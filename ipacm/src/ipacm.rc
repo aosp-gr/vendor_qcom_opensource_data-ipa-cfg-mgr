@@ -34,3 +34,6 @@ service vendor.ipacm /system/vendor/bin/ipacm
     class late_start
     user radio
     group radio inet
+
+on post-fs-data
+    start vendor.ipacm
